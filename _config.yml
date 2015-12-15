@@ -1,0 +1,66 @@
+# project definitions
+project: mvUCCU
+audience: all
+product: all
+platform: all
+version: all
+output: web
+destination: _site
+topnav_title: mvUCCU
+homepage_title: mvUCCU Documentation
+site_title: mvUCCU Documentation
+project_folder: docs
+company_name: NekoKun Project
+footer_image_location: ../images/company_logo.png
+# github_editme_path: tomjohnson1492/documentation-theme-jekyll/edit/reviews
+# disqus_shortname: idrbwjekyll
+# variables
+
+sidebar_tagline: mvUCCU
+sidebar_version: Universal Customization Control Unit
+theme_file: theme-blue.css
+pdf_file_name: mydoc_designers_pdf.pdf
+
+port: 4009
+
+exclude:
+  - _site
+  - _drafts
+  - configs/
+  - licenses
+  - Gemfile*
+
+# same for all
+host: 127.0.0.1
+feedback_email: mvUCCU@orzfly.com
+
+markdown: redcarpet
+
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "tables", "with_toc_data"]
+
+highlighter: pygments
+
+collections:
+  tooltips:
+    output: false
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      comments: true
+      search: true
+  -
+    scope:
+      path: ""
+      type: "tooltips"
+    values:
+      layout: "page"
+      comments: true
+      search: true
+      tooltip: true
+
